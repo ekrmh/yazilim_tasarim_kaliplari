@@ -1,8 +1,0 @@
-@startuml
- class Araba {
-   uretici : String
-   renk : String
-   km : Integer
-   uretimYili : Date
-}
-@enduml"

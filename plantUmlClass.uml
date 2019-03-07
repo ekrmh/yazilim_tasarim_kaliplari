@@ -1,0 +1,35 @@
+@startuml
+ class Araba {
+   uretici : String
+   renk : String
+   km : Integer
+   uretimYili : Date
+}
+
+class Ornek {
+ -variable1
+ #variable2
+ ~method1()
+ +method2()
+}
+
+enum SampleEnumClass {
+  CELCIUS
+  KELVIN
+  FAHRENHEIT
+}
+
+class User {
+  .. Simple Getter ..
+  + getName()
+  + getAddress()
+  .. Some setter ..
+  + setName()
+  __ private data __
+  int age
+  -- encrypted --
+  String password
+}
+
+
+@enduml"
