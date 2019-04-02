@@ -38,11 +38,14 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:$appCompatVersion"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
 
+    // For Json parse
+    implementation 'com.google.code.gson:gson:2.8.5'
     // For Navigation
     implementation "androidx.navigation:navigation-fragment:2.1.0-alpha01" // For Kotlin use navigation-fragment-ktx
     implementation "androidx.navigation:navigation-ui:2.1.0-alpha01" // For Kotlin use navigation-ui-ktx
 
 
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
     testİmplementation 'junit:junit:4.12'
     androidTestİmplementation 'com.android.support.test:runner:1.0.2'
     androidTestİmplementation 'com.android.support.test.espresso:espresso-core:3.0.2'

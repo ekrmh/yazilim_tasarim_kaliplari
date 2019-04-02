@@ -4,5 +4,7 @@ import android.app.Application
 
 class TasarimKaliplariApplication : Application() {
 
-
+    override fun onCreate() {
+        super.onCreate()
+    }
 }
