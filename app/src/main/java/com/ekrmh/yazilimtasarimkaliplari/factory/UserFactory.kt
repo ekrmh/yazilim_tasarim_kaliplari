@@ -1,6 +1,15 @@
 package com.ekrmh.yazilimtasarimkaliplari.factory
 
+// Factory Pattern
 
+/*
+
+    İstenilen sınıfı oluşturur ve geriye döndürür.
+    Standart,Google,Facebook sınıflarından direk nesne türetmek yerine createUser fonksiyonunu kullanarak
+    istenilen sınıftan nesne döndürülür.
+
+
+ */
 class UserFactory {
     companion object {
         fun createUser(key:UserType): IUser? {

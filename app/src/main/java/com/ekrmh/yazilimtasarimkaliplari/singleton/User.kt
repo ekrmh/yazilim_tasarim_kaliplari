@@ -4,6 +4,11 @@ import android.content.Context
 import com.ekrmh.yazilimtasarimkaliplari.application.ApplicationKey
 import java.util.*
 
+
+// Singleton object
+// Bu sınıfın görevi her kullanıcıya benzersiz bir id tanımlar.
+// Uygulama çalıştığında benzersiz bir id oluşturulur ve singleton olduğundan her defasında
+// nesne türetmeden bu değere ulaşılabilir.
 object User {
     lateinit var userId:String
 
