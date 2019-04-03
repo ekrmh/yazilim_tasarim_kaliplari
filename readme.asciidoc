@@ -1,1 +1,9 @@
 # yazilim_tasarim_kaliplari
+
+### İçerikler
+
+
+
+https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/singleton[Singleton Pattern]
+
+https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/factory[Factory Pattern]
