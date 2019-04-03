@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.ekrmh.yazilimtasarimkaliplari.R
-import com.ekrmh.yazilimtasarimkaliplari.model.User
+import com.ekrmh.yazilimtasarimkaliplari.singleton.User
 import kotlinx.android.synthetic.main.fragment_profile.*
 
 

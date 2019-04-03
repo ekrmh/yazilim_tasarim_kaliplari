@@ -1,15 +1,13 @@
-package com.ekrmh.yazilimtasarimkaliplari.application
+package com.ekrmh.yazilimtasarimkaliplari.singleton
 
 import android.content.Context
-import com.google.gson.Gson
-import kotlin.reflect.KClass
+import com.ekrmh.yazilimtasarimkaliplari.application.ApplicationKey
 import com.google.gson.GsonBuilder
-import java.lang.reflect.Modifier.TRANSIENT
 
 // Singleton object
 object DiskDataHandler {
     val PREFS_FILENAME = "TasarimKaliplari"
-    fun <T: Any>  writeToDisk(context: Context, key:ApplicationKey, o:Any){
+    fun <T: Any>  writeToDisk(context: Context, key: ApplicationKey, o:Any){
         val gson = GsonBuilder().create();
 
         val json = gson.toJson(o)
