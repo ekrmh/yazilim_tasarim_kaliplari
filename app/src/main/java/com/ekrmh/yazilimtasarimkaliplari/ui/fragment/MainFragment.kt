@@ -10,6 +10,7 @@ import androidx.navigation.Navigation
 import com.ekrmh.yazilimtasarimkaliplari.R
 import com.ekrmh.yazilimtasarimkaliplari.factory.UserFactory
 import com.ekrmh.yazilimtasarimkaliplari.factory.UserType
+import com.ekrmh.yazilimtasarimkaliplari.prototype.Prototype
 import com.ekrmh.yazilimtasarimkaliplari.singleton.User
 import com.ekrmh.yazilimtasarimkaliplari.ui.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_main.*
@@ -42,6 +43,35 @@ class MainFragment : BaseFragment() {
 
         val standartUser = UserFactory.createUser(UserType.standart)
         Log.d(TAG,"User Type : " +  standartUser?.getType())
+
+
+        // Prototype Pattern
+
+        val userUIDList = mutableListOf("UID1","UID2","UID3","UID4","UID5")
+        val basePrototype = Prototype(userUIDList)
+        val shallowCopyPrototype = basePrototype.shallowCopy() as Prototype
+        val deepCopyPrototype = basePrototype.deepCopy() as Prototype
+
+        basePrototype.userUIDList.add("baseUID1")
+        basePrototype.userUIDList.add("baseUID2")
+
+        basePrototype.userUIDList.removeAt(0)
+
+        shallowCopyPrototype.userUIDList.add("shallowUID1")
+        shallowCopyPrototype.userUIDList.add("shallowUID2")
+
+        shallowCopyPrototype.userUIDList.removeAt(0)
+
+        deepCopyPrototype.userUIDList.add("deepUID1")
+        deepCopyPrototype.userUIDList.add("deepUID2")
+
+        deepCopyPrototype.userUIDList.removeAt(0)
+
+        Log.d(TAG,"Prototype Pattern - BasePrototype userUIDList : ${basePrototype.userUIDList}")
+        Log.d(TAG,"Prototype Pattern - ShallowPrototype userUIDList : ${shallowCopyPrototype.userUIDList}")
+        Log.d(TAG,"Prototype Pattern - DeepPrototype userUIDList : ${deepCopyPrototype.userUIDList}")
+
+
 
 
     }
