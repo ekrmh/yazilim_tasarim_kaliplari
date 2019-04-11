@@ -2,12 +2,14 @@ package com.ekrmh.yazilimtasarimkaliplari.ui.fragment
 
 
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.ekrmh.yazilimtasarimkaliplari.R
+import com.ekrmh.yazilimtasarimkaliplari.`object`.pool.ObjectPoolManager
 import com.ekrmh.yazilimtasarimkaliplari.factory.UserFactory
 import com.ekrmh.yazilimtasarimkaliplari.factory.UserType
 import com.ekrmh.yazilimtasarimkaliplari.prototype.Prototype
@@ -71,7 +73,19 @@ class MainFragment : BaseFragment() {
         Log.d(TAG,"Prototype Pattern - ShallowPrototype userUIDList : ${shallowCopyPrototype.userUIDList}")
         Log.d(TAG,"Prototype Pattern - DeepPrototype userUIDList : ${deepCopyPrototype.userUIDList}")
 
-
+        // Object Pool Pattern
+        val user1 = ObjectPoolManager.getNewObject()
+        val user2 = ObjectPoolManager.getNewObject()
+        val user3 = ObjectPoolManager.getNewObject()
+        val user4 = ObjectPoolManager.getNewObject()
+        ObjectPoolManager.releaseObject(user1)
+        val user5 = ObjectPoolManager.getNewObject()
+        ObjectPoolManager.releaseObject(user3)
+        val user6 = ObjectPoolManager.getNewObject()
+        ObjectPoolManager.releaseObject(user6)
+        ObjectPoolManager.releaseObject(user4)
+        ObjectPoolManager.releaseObject(user2)
+        ObjectPoolManager.releaseObject(user5)
 
 
     }
