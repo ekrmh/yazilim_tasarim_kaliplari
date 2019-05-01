@@ -10,3 +10,6 @@ https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/app/src/main/java
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/prototype[Prototype Pattern]
 
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/object/pool[Object Pool Pattern]
+
+https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/iterator[Iterator Pattern]
+https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/uml/iterator[Iterator UML diagram]
