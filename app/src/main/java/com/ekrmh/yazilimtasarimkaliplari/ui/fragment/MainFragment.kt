@@ -12,6 +12,7 @@ import com.ekrmh.yazilimtasarimkaliplari.R
 import com.ekrmh.yazilimtasarimkaliplari.`object`.pool.ObjectPoolManager
 import com.ekrmh.yazilimtasarimkaliplari.factory.UserFactory
 import com.ekrmh.yazilimtasarimkaliplari.factory.UserType
+import com.ekrmh.yazilimtasarimkaliplari.iterator.Shop
 import com.ekrmh.yazilimtasarimkaliplari.prototype.Prototype
 import com.ekrmh.yazilimtasarimkaliplari.singleton.User
 import com.ekrmh.yazilimtasarimkaliplari.ui.base.BaseFragment
@@ -87,6 +88,20 @@ class MainFragment : BaseFragment() {
         ObjectPoolManager.releaseObject(user2)
         ObjectPoolManager.releaseObject(user5)
 
+
+
+        // Builder Pattern
+
+
+        // Iterator Pattern
+
+        val shop = Shop(listOf("Shop1", "Shop2", "Shop3", "Shop4", "Shop5", "Shop6"))
+        val shopIterator = shop.getIterator()
+
+        while (shopIterator.hasNext()){
+            val shopName = shopIterator.next()
+            Log.d(TAG, "Iterator Pattern -- shopName : $shopName")
+        }
 
     }
 

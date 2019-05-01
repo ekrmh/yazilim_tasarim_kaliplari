@@ -7,6 +7,5 @@ class User(){
     init {
 
         Log.d(TAG,"Object Pool Pattern : created new user...")
-        Thread.sleep(2000)
     }
 }
