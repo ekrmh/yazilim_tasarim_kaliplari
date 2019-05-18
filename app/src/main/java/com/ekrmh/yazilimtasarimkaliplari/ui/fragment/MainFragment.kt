@@ -13,6 +13,8 @@ import com.ekrmh.yazilimtasarimkaliplari.`object`.pool.ObjectPoolManager
 import com.ekrmh.yazilimtasarimkaliplari.factory.UserFactory
 import com.ekrmh.yazilimtasarimkaliplari.factory.UserType
 import com.ekrmh.yazilimtasarimkaliplari.iterator.Shop
+import com.ekrmh.yazilimtasarimkaliplari.memento.Ayarlar
+import com.ekrmh.yazilimtasarimkaliplari.memento.AyarlarMemory
 import com.ekrmh.yazilimtasarimkaliplari.prototype.Prototype
 import com.ekrmh.yazilimtasarimkaliplari.singleton.User
 import com.ekrmh.yazilimtasarimkaliplari.ui.base.BaseFragment
@@ -102,6 +104,30 @@ class MainFragment : BaseFragment() {
             val shopName = shopIterator.next()
             Log.d(TAG, "Iterator Pattern -- shopName : $shopName")
         }
+
+
+        // Memento Pattern
+        val ayarlarMemory = AyarlarMemory()
+
+        val ayarlar = Ayarlar()
+
+        ayarlar.kullaniciAdi = "ekremh"
+        ayarlar.sifre = "ekrem123"
+        ayarlar.guvenlikKodu = 1234
+
+        Log.d(TAG, "Memento Patttern - Ayarlar :  $ayarlar")
+
+        ayarlarMemory.memento = ayarlar.yedekle()
+
+        ayarlar.guvenlikKodu = 4321
+        ayarlar.sifre = "ekrem456"
+
+        Log.d(TAG, "Memento Patttern - Güncellenmiş Ayarlar : $ayarlar")
+
+        ayarlar.yedeklenenAyarlar(ayarlarMemory.memento!!)
+
+        Log.d(TAG, "Memento Patttern - Yedeklenen Ayarlar : $ayarlar")
+
 
     }
 
