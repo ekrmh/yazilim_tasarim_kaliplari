@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.ekrmh.yazilimtasarimkaliplari.R
 import com.ekrmh.yazilimtasarimkaliplari.`object`.pool.ObjectPoolManager
+import com.ekrmh.yazilimtasarimkaliplari.builder.Ev
 import com.ekrmh.yazilimtasarimkaliplari.command.SiparisCikarCommand
 import com.ekrmh.yazilimtasarimkaliplari.command.SiparisEkleCommand
 import com.ekrmh.yazilimtasarimkaliplari.command.SiparisYonetici
@@ -23,6 +24,7 @@ import com.ekrmh.yazilimtasarimkaliplari.prototype.Prototype
 import com.ekrmh.yazilimtasarimkaliplari.singleton.User
 import com.ekrmh.yazilimtasarimkaliplari.ui.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_main.*
+import java.lang.IllegalArgumentException
 
 
 class MainFragment : BaseFragment() {
@@ -96,7 +98,6 @@ class MainFragment : BaseFragment() {
 
 
 
-        // Builder Pattern
 
 
         // Iterator Pattern
@@ -151,6 +152,36 @@ class MainFragment : BaseFragment() {
         val gozlemci = Gozlemci(Email())
         gozlemci.dogrula(false)
         gozlemci.dogrula(true)
+
+
+        // Builder Pattern
+
+        val ev = Ev.Builder(3)
+            .guvenlik(true)
+            .siteIcindeMi(true)
+            .ulasimIyiMi(false)
+            .build()
+
+        val ev1 = Ev.Builder(2)
+            .guvenlik(true)
+            .build()
+
+        val ev2 = Ev.Builder(1)
+            .guvenlik(false)
+            .siteIcindeMi(true)
+            .build()
+        try {
+            val ev3 = Ev.Builder(-1)
+                .build()
+
+        } catch (e : IllegalArgumentException){
+            Log.d(TAG,e.localizedMessage)
+        }
+
+        Log.d(TAG, ev.toString())
+        Log.d(TAG, ev1.toString())
+        Log.d(TAG, ev2.toString())
+
     }
 
 
