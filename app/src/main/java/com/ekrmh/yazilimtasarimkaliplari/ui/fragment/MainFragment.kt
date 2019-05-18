@@ -10,6 +10,9 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.ekrmh.yazilimtasarimkaliplari.R
 import com.ekrmh.yazilimtasarimkaliplari.`object`.pool.ObjectPoolManager
+import com.ekrmh.yazilimtasarimkaliplari.command.SiparisCikarCommand
+import com.ekrmh.yazilimtasarimkaliplari.command.SiparisEkleCommand
+import com.ekrmh.yazilimtasarimkaliplari.command.SiparisYonetici
 import com.ekrmh.yazilimtasarimkaliplari.factory.UserFactory
 import com.ekrmh.yazilimtasarimkaliplari.factory.UserType
 import com.ekrmh.yazilimtasarimkaliplari.iterator.Shop
@@ -128,6 +131,18 @@ class MainFragment : BaseFragment() {
 
         Log.d(TAG, "Memento Patttern - Yedeklenen Ayarlar : $ayarlar")
 
+
+        // Command Pattern
+
+        val siparisYonetici = SiparisYonetici()
+        siparisYonetici.komutEkle(SiparisEkleCommand("siparis1",1))
+        siparisYonetici.komutEkle(SiparisEkleCommand("siparis2",2))
+        siparisYonetici.komutEkle(SiparisEkleCommand("siparis3",3))
+        siparisYonetici.komutEkle(SiparisCikarCommand("siparis1",1))
+        siparisYonetici.komutEkle(SiparisEkleCommand("siparis4",4))
+        siparisYonetici.komutEkle(SiparisEkleCommand("siparis5",5))
+
+        siparisYonetici.komutlarıCalistir()
 
     }
 
