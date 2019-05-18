@@ -21,8 +21,8 @@ https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/app/src/main/java
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/uml/iterator[Iterator UML diagram]
 
 
-https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/observable[Observable Pattern]
-https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/uml/observable[Observable UML diagram]
+https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/observer[Observer Pattern]
+https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/uml/observer[Observer UML diagram]
 
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/memento[Memento Pattern]
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/uml/memento[Memento UML diagram]
