@@ -2,7 +2,6 @@ package com.ekrmh.yazilimtasarimkaliplari.ui.fragment
 
 
 import android.os.Bundle
-import android.os.Handler
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -18,6 +17,8 @@ import com.ekrmh.yazilimtasarimkaliplari.factory.UserType
 import com.ekrmh.yazilimtasarimkaliplari.iterator.Shop
 import com.ekrmh.yazilimtasarimkaliplari.memento.Ayarlar
 import com.ekrmh.yazilimtasarimkaliplari.memento.AyarlarMemory
+import com.ekrmh.yazilimtasarimkaliplari.observable.Email
+import com.ekrmh.yazilimtasarimkaliplari.observable.Gozlemci
 import com.ekrmh.yazilimtasarimkaliplari.prototype.Prototype
 import com.ekrmh.yazilimtasarimkaliplari.singleton.User
 import com.ekrmh.yazilimtasarimkaliplari.ui.base.BaseFragment
@@ -144,6 +145,12 @@ class MainFragment : BaseFragment() {
 
         siparisYonetici.komutlarıCalistir()
 
+
+        // Observable Pattern
+
+        val gozlemci = Gozlemci(Email())
+        gozlemci.dogrula(false)
+        gozlemci.dogrula(true)
     }
 
 
