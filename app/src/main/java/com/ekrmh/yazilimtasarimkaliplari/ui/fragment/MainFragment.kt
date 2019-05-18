@@ -9,6 +9,10 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.ekrmh.yazilimtasarimkaliplari.R
 import com.ekrmh.yazilimtasarimkaliplari.`object`.pool.ObjectPoolManager
+import com.ekrmh.yazilimtasarimkaliplari.abstract_factory.Deneme
+import com.ekrmh.yazilimtasarimkaliplari.abstract_factory.KitapFabrikasi
+import com.ekrmh.yazilimtasarimkaliplari.abstract_factory.KitapTuru
+import com.ekrmh.yazilimtasarimkaliplari.abstract_factory.Roman
 import com.ekrmh.yazilimtasarimkaliplari.builder.Ev
 import com.ekrmh.yazilimtasarimkaliplari.command.SiparisCikarCommand
 import com.ekrmh.yazilimtasarimkaliplari.command.SiparisEkleCommand
@@ -181,6 +185,15 @@ class MainFragment : BaseFragment() {
         Log.d(TAG, ev.toString())
         Log.d(TAG, ev1.toString())
         Log.d(TAG, ev2.toString())
+
+        // Abstract Factory
+
+        val roman = KitapFabrikasi.kitapUret("roman1",KitapTuru.ROMAN)
+        val deneme = KitapFabrikasi.kitapUret("deneme1",KitapTuru.DENEME)
+
+        roman?.bilgiGetir()
+        deneme?.bilgiGetir()
+
 
     }
 
