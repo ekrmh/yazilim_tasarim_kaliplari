@@ -9,10 +9,8 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.ekrmh.yazilimtasarimkaliplari.R
 import com.ekrmh.yazilimtasarimkaliplari.`object`.pool.ObjectPoolManager
-import com.ekrmh.yazilimtasarimkaliplari.abstract_factory.Deneme
 import com.ekrmh.yazilimtasarimkaliplari.abstract_factory.KitapFabrikasi
 import com.ekrmh.yazilimtasarimkaliplari.abstract_factory.KitapTuru
-import com.ekrmh.yazilimtasarimkaliplari.abstract_factory.Roman
 import com.ekrmh.yazilimtasarimkaliplari.builder.Ev
 import com.ekrmh.yazilimtasarimkaliplari.command.SiparisCikarCommand
 import com.ekrmh.yazilimtasarimkaliplari.command.SiparisEkleCommand
@@ -22,8 +20,8 @@ import com.ekrmh.yazilimtasarimkaliplari.factory.UserType
 import com.ekrmh.yazilimtasarimkaliplari.iterator.Shop
 import com.ekrmh.yazilimtasarimkaliplari.memento.Ayarlar
 import com.ekrmh.yazilimtasarimkaliplari.memento.AyarlarMemory
-import com.ekrmh.yazilimtasarimkaliplari.observable.Email
-import com.ekrmh.yazilimtasarimkaliplari.observable.Gozlemci
+import com.ekrmh.yazilimtasarimkaliplari.observer.Email
+import com.ekrmh.yazilimtasarimkaliplari.observer.Gozlemci
 import com.ekrmh.yazilimtasarimkaliplari.prototype.Prototype
 import com.ekrmh.yazilimtasarimkaliplari.singleton.User
 import com.ekrmh.yazilimtasarimkaliplari.ui.base.BaseFragment

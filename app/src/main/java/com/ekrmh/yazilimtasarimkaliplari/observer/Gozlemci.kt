@@ -1,4 +1,4 @@
-package com.ekrmh.yazilimtasarimkaliplari.observable
+package com.ekrmh.yazilimtasarimkaliplari.observer
 
 class Gozlemci(val listener:IDogrulama) {
 
