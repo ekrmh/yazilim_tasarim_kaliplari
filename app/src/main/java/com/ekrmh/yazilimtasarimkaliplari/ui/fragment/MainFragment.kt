@@ -189,7 +189,7 @@ class MainFragment : BaseFragment() {
         // Abstract Factory
 
         val roman = KitapFabrikasi.kitapUret("roman1",KitapTuru.ROMAN)
-        val deneme = KitapFabrikasi.kitapUret("deneme1",KitapTuru.DENEME)
+        val deneme = KitapFabrikasi.kitapUret("denemed1",KitapTuru.DENEME)
 
         roman?.bilgiGetir()
         deneme?.bilgiGetir()
