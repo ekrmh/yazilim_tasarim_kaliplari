@@ -30,3 +30,4 @@ https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/uml/memento[Memen
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/command[Command Pattern]
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/uml/command[Command UML diagram]
 
+https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/decorator[Decorator Pattern]
