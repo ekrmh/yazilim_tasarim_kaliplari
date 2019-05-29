@@ -27,6 +27,9 @@ import com.ekrmh.yazilimtasarimkaliplari.singleton.User
 import com.ekrmh.yazilimtasarimkaliplari.ui.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_main.*
 import java.lang.IllegalArgumentException
+import com.ekrmh.yazilimtasarimkaliplari.decorator.BMW
+import com.ekrmh.yazilimtasarimkaliplari.decorator.CelikJantDecorator
+import com.ekrmh.yazilimtasarimkaliplari.decorator.SunroofDecorator
 
 
 class MainFragment : BaseFragment() {
@@ -191,6 +194,16 @@ class MainFragment : BaseFragment() {
 
         roman?.bilgiGetir()
         deneme?.bilgiGetir()
+
+        // Decorator Pattern
+
+        val bmw = BMW()
+
+        Log.d(TAG, "Decorator Pattern --- ${bmw.marka} ${bmw.fiyat}")
+        val sunroofDecorator = SunroofDecorator(bmw)
+        Log.d(TAG, "Decorator Pattern --- ${sunroofDecorator.marka} ${sunroofDecorator.fiyat}")
+        val celikJantDecorator = CelikJantDecorator(sunroofDecorator)
+        Log.d(TAG, "Decorator Pattern --- ${celikJantDecorator.marka} ${celikJantDecorator.fiyat}")
 
 
     }
