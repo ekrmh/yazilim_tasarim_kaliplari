@@ -1,4 +1,4 @@
-package com.ekrmh.yazilimtasarimkaliplari.singleton
+package com.ekrmh.yazilimtasarimkaliplari.ui
 
 import android.content.Context
 import com.ekrmh.yazilimtasarimkaliplari.application.ApplicationKey

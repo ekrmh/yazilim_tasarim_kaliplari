@@ -1,4 +1,4 @@
-package com.ekrmh.yazilimtasarimkaliplari.singleton
+package com.ekrmh.yazilimtasarimkaliplari.ui
 
 import android.content.Context
 import com.ekrmh.yazilimtasarimkaliplari.application.ApplicationKey
@@ -13,14 +13,26 @@ object User {
     lateinit var userId:String
 
     fun setUserId(context: Context): String {
-        if (DiskDataHandler.getFromDisk(context,ApplicationKey.USER_ID,String::class.java) != null){
-            val userId = DiskDataHandler.getFromDisk(context,ApplicationKey.USER_ID,String::class.java) as String
+        if (DiskDataHandler.getFromDisk(
+                context,
+                ApplicationKey.USER_ID,
+                String::class.java
+            ) != null){
+            val userId = DiskDataHandler.getFromDisk(
+                context,
+                ApplicationKey.USER_ID,
+                String::class.java
+            ) as String
             User.userId = userId
             return userId
         }
         else {
             val userId = UUID.randomUUID().toString()
-            DiskDataHandler.writeToDisk<String>(context,ApplicationKey.USER_ID, userId)
+            DiskDataHandler.writeToDisk<String>(
+                context,
+                ApplicationKey.USER_ID,
+                userId
+            )
             User.userId = userId
             return UUID.randomUUID().toString()
 

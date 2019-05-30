@@ -23,13 +23,14 @@ import com.ekrmh.yazilimtasarimkaliplari.memento.AyarlarMemory
 import com.ekrmh.yazilimtasarimkaliplari.observer.Email
 import com.ekrmh.yazilimtasarimkaliplari.observer.Gozlemci
 import com.ekrmh.yazilimtasarimkaliplari.prototype.Prototype
-import com.ekrmh.yazilimtasarimkaliplari.singleton.User
+import com.ekrmh.yazilimtasarimkaliplari.ui.User
 import com.ekrmh.yazilimtasarimkaliplari.ui.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_main.*
 import java.lang.IllegalArgumentException
 import com.ekrmh.yazilimtasarimkaliplari.decorator.BMW
 import com.ekrmh.yazilimtasarimkaliplari.decorator.CelikJantDecorator
 import com.ekrmh.yazilimtasarimkaliplari.decorator.SunroofDecorator
+import com.ekrmh.yazilimtasarimkaliplari.singleton.UserSingleton
 
 
 class MainFragment : BaseFragment() {
@@ -46,7 +47,14 @@ class MainFragment : BaseFragment() {
 
 
         // Singleton Pattern
-        User.setUserId(context!!)
+        val userSingleton = UserSingleton.getInstance()
+        val userSingleton1 = UserSingleton.getInstance()
+
+        userSingleton.isim = "Ekrem"
+        userSingleton.yas = 22
+
+        Log.d(TAG,"Singleton Pattern ---- ${userSingleton1.isim} - ${userSingleton1.yas}")
+
 
 
         // Factory Pattern
