@@ -2,7 +2,7 @@
 {nbsp} +
 {nbsp} +
 
-Kotlin dili kullanarak hazırlanmış bir Android uygulama projesidir. Projeyi çalıştırmak için bilgisayarına Android Studio yüklemeniz gerekmektedir.
+Kotlin dili kullanarak hazırlanmış bir Android uygulama projesidir. Projeyi çalıştırmak için bilgisayarınıza Android Studio yüklemeniz gerekmektedir.
 {nbsp} +
 
 150202089 - Ekrem HATİPOĞLU
