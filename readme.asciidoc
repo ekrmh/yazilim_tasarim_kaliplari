@@ -1,7 +1,11 @@
 # yazilim_tasarim_kaliplari
 {nbsp} +
-150202089 - Ekrem HATİPOĞLU
+{nbsp} +
+
 Kotlin dili kullanarak hazırlanmış bir Android uygulama projesidir. Projeyi çalıştırmak için bilgisayarına Android Studio yüklemeniz gerekmektedir.
+{nbsp} +
+
+150202089 - Ekrem HATİPOĞLU
 
 
 ### İçerikler
