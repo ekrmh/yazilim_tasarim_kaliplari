@@ -1,7 +1,7 @@
 # yazilim_tasarim_kaliplari
 
 ### İçerikler
-https://github.com/ekrmh/yazilim_tasarim_kaliplari/blob/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/ui/fragment/MainFragment.kt[Test Patterns]
+https://github.com/ekrmh/yazilim_tasarim_kaliplari/blob/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/ui/fragment/MainFragment.kt[Tüm Tasarım Kalıplarının Kullanıldığı Dosya]
 
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/singleton[Singleton Pattern]
 
