@@ -7,6 +7,10 @@ Kotlin dili kullanarak hazırlanmış bir Android uygulama projesidir. Projeyi �
 
 150202089 - Ekrem HATİPOĞLU
 
+Proje Dosyaları *app/src/main/java/com/ekrmh/yazilimtasarimkaliplari*
+{nbsp} +
+UML Diagramları *uml* klasörlerinin altındadır başlığın üzerindeki linklere tıklayarakta ulaşabilirsiniz.
+
 
 ### İçerikler
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/blob/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/ui/fragment/MainFragment.kt[Tüm Tasarım Kalıplarının Kullanıldığı Dosya]
