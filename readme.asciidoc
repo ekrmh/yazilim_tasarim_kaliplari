@@ -1,33 +1,66 @@
 # yazilim_tasarim_kaliplari
+{nbsp} +
+150202089 - Ekrem HATİPOĞLU
+Kotlin dili kullanarak hazırlanmış bir Android uygulama projesidir. Projeyi çalıştırmak için bilgisayarına Android Studio yüklemeniz gerekmektedir.
+
 
 ### İçerikler
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/blob/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/ui/fragment/MainFragment.kt[Tüm Tasarım Kalıplarının Kullanıldığı Dosya]
+{nbsp} +
+Tüm tasarım kalıplarının test edildiği dosya `MainFragment.kt` dosyasıdır. Android Studio kullanarak proje çalıştırıldığında Android Studio içerisinde bulunan Logcat bölümü açılarak log kayıtlarına bakılabilir.
 
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/singleton[Singleton Pattern]
+{nbsp} +
+`UserSingleton` sınıfı singleton tasarlanmıştır. Statik tanımlanan `getInstance()` fonksiyonu çağırılarak kullanılabilir.
 
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/factory[Factory Pattern]
+{nbsp} +
+`UserFactory` sınıfı `StandartUser`, `GoogleUser`, `FacebookUser`  sınıflarının üreticisidir. `UserFactory` sınıfı içerisinde statik tanımlanan `createUser()` fonksiyonuna `UserType` enum sınıfından bir parametre verilerek bir nesne üretilebilir.
 
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/prototype[Prototype Pattern]
+{nbsp} +
+`Prototype` sınıfının içerisinde bulunanan `shallowCopy` ve `deepCopy` fonksiyonları kullanılarak kopyalama işlemi gerçekleştirilebilir.
 
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/object/pool[Object Pool Pattern]
+{nbsp} +
+`ObjectPoolManager` sınıfında tanımlanan `getNewObject` ve `releaseObject` fonksiyonları kullanılarak gerçekleştirilebilir. Default olarak üretilebilecek maksimum nesne sayısı 3'tür. `size` değişkeni değiştirilerek bu değer değiştirilebilir. `getNewObject` fonksiyonu nesne üretmek için kullanılır nesne üretilemiyorsa geriye `null` değer döndürür. `releaseObject` fonksiyonu ise işi biten nesneleri tekrardan nesne havuzuna göndermek için kullanılır.
 
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/builder[Builder Pattern]
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/uml/builder[Builder UML diagram]
+{nbsp} +
+`Ev` sınıfı kullanılarak gerçekleştirilebilir. `Ev` sınıfının içerisinde bulunan `Builder` sınıfının sahip olduğu `build` fonksiyonu kullanılarak `Ev` tipinde nesne üretilebilir. Örnek kullanım aşağıdaki gibidir.
+
+`val ev = Ev.Builder(3)
+            .guvenlik(true)
+            .siteIcindeMi(true)
+            .ulasimIyiMi(false)
+            .build()`
 
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/abstract_factory[Absract Factory Pattern]
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/uml/abstract_factory[Absract Factory UML diagram]
+`KitapFabrikasi` sınıfı `Roman`, `Deneme`  sınıflarının üreticisidir. `KitapFabrikasi` sınıfı içerisinde statik tanımlanan `kitapUret()` fonksiyonuna kitap adını ve `KitapTuru` enum sınıfından bir parametre verilerek bir nesne üretilebilir.
+
 
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/iterator[Iterator Pattern]
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/uml/iterator[Iterator UML diagram]
-
+{nbsp} +
+`Shop` sınıfı kullanılarak gerçekleştirilebilir. `Shop` sınıfı üretilmeden önce `List<String>` tipinde constructor'u parametre alır. `getIterator()` fonksiyonu kullanılarak `ShopIterator` nesnesi elde edilebilir ardından parametre olarak verdiğimiz liste içerisinde `hasNext()` (Bir sonraki eleman var mı?) ve `next()` (Bir sonraki elemana geç) fonksiyonları kullanılarak for döngüsü şeklinde kullanılabilir.
 
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/observer[Observer Pattern]
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/uml/observer[Observer UML diagram]
+{nbsp} +
+`Gozlemci` ve `Email` sınıfları kullanılarak gerçekleştirilebilir. `Gozlemci` (Nesne üretmek için parametre olarak `IDogrulama` interfacesinden bir listener vermek zorundasınız ) sınıfında bulunan `dogrula()` fonksiyonu çalıştırıldığında `Email` sınıfında bulunan `onDegerGuncellendi()` fonksiyonu çalışır.
 
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/memento[Memento Pattern]
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/uml/memento[Memento UML diagram]
+{nbsp} +
+`Ayarlar` , `AyarlarMemento` , `AyarlarMemory` kullanılarak gerçekleştirebilir. `Ayarlar` içerisinde bulunan `yedekle(): AyarlarMemento` ve `yedeklenenAyarlar(ayarlarMemento: AyarlarMemento)` fonksiyonları kullanılarak gerçekleştirilebilir.
 
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/command[Command Pattern]
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/uml/command[Command UML diagram]
+{nbsp} +
+`SiparisYonetici` sınıfı kullanarak gerçekleştirebilir. İçerisinde bulunan `komutEkle()` fonksiyonuna parametre olarak `ISiparisCommand` interfacesini implemente eden bir nesne verilir ardından `komutlarıCalistir()` fonksiyonu kullanılarak eklenen nesnelerin `calistir()` fonksiyonları sırasıyla çalışır.
 
 https://github.com/ekrmh/yazilim_tasarim_kaliplari/tree/master/app/src/main/java/com/ekrmh/yazilimtasarimkaliplari/decorator[Decorator Pattern]
+`BMW`, `SunroofDecorator` , `CelikJantDecorator` sınıfları kullanılarak gerçekleştirilebilir. `BMW` sınıfı `SunroofDecorator` veya `CelikJantDecorator` 'una parametre olarak verilerek kullanılabilir.
+
